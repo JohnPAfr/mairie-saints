@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a, p {
+    font-family: 'Montserrat', sans-serif;
+} */
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    height: auto;
+
+    .filter {
+        width: 100%;
+        height: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    .bienvenue {
+        width: 100%;
+        background-image: url("img/saints.jpg");
+        background-size: cover;
+        
+        &__container {
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .mairie {
+        width: 100%;
+        background-image: url("img/mairie.jpg");
+        background-size: cover;
+    }
+
+    .poste__title {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            width: 160px;
+            height: 61px;
+        }
+    }
+
+}
+
+footer {
+    @include flexCenter();
+    flex-direction: column;
+
+    margin-top: auto;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 80%;
+
+        list-style-type: none;
+
+        li a {
+            text-decoration: none;
+        }
+    }
+}
+
+/* .navigation {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+
+        &__item {
+            @include flexCenter();
+
+            padding: 0.5em;
+
+            &__link {
+                text-decoration: none;
+            }
+        }
+    }
+} */

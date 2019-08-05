@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a, p {
+    font-family: 'Montserrat', sans-serif;
+} */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+main .filter {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+main .bienvenue {
+  width: 100%;
+  background-image: url("img/saints.jpg");
+  background-size: cover;
+}
+
+main .bienvenue__container h2 {
+  font-size: 24px;
+}
+
+main .bienvenue__container p {
+  font-size: 14px;
+}
+
+main .mairie {
+  width: 100%;
+  background-image: url("img/mairie.jpg");
+  background-size: cover;
+}
+
+main .poste__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .poste__title img {
+  display: block;
+  width: 160px;
+  height: 61px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: auto;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  list-style-type: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+/* .navigation {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+
+        &__item {
+            @include flexCenter();
+
+            padding: 0.5em;
+
+            &__link {
+                text-decoration: none;
+            }
+        }
+    }
+} */
+/*# sourceMappingURL=main.css.map */
