@@ -7,13 +7,6 @@
   padding: 0;
 }
 
-/* h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
-a, p {
-    font-family: 'Montserrat', sans-serif;
-} */
 html {
   height: 100%;
 }
@@ -34,9 +27,32 @@ main {
   height: auto;
 }
 
+main h2 {
+  font-size: 24px;
+}
+
+main p {
+  font-size: 14px;
+}
+
+main .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 main .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
+  text-shadow: 2px 2px 13px black;
   color: white;
   background: rgba(0, 0, 0, 0.35);
 }
@@ -47,18 +63,22 @@ main .bienvenue {
   background-size: cover;
 }
 
-main .bienvenue__container h2 {
-  font-size: 24px;
-}
-
-main .bienvenue__container p {
-  font-size: 14px;
+@media (min-width: 500px) {
+  main .bienvenue {
+    height: 50vh;
+  }
 }
 
 main .mairie {
   width: 100%;
   background-image: url("img/mairie.jpg");
   background-size: cover;
+}
+
+@media (min-width: 500px) {
+  main .mairie {
+    height: 50vh;
+  }
 }
 
 main .poste__title {
@@ -72,8 +92,20 @@ main .poste__title {
 
 main .poste__title img {
   display: block;
-  width: 160px;
-  height: 61px;
+  width: 144px;
+  height: 55px;
+}
+
+main .bibli {
+  width: 100%;
+  background-image: url("img/bibli.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 500px) {
+  main .bibli {
+    height: 50vh;
+  }
 }
 
 footer {
@@ -86,10 +118,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: auto;
 }
 
@@ -97,10 +129,10 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -113,27 +145,4 @@ footer ul {
 footer ul li a {
   text-decoration: none;
 }
-
-/* .navigation {
-    width: 70%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-
-    &__list {
-        display: flex;
-        list-style-type: none;
-
-        &__item {
-            @include flexCenter();
-
-            padding: 0.5em;
-
-            &__link {
-                text-decoration: none;
-            }
-        }
-    }
-} */
 /*# sourceMappingURL=main.css.map */
