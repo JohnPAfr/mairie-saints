@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Muli:400,700,900&display=swap");
 *,
 *::before,
 *::after {
@@ -7,12 +8,11 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
-}
-
+/** MIXINS **/
+/** IMPORTS **/
+/** VARIABLES **/
+/** GLOBAL **/
 body {
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,115 +20,183 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Muli", sans-serif;
 }
 
-body h1, body h2 {
-  font-size: 24px !important;
-  margin: 0 !important;
+section {
+  margin: 3em auto;
 }
 
-body p {
-  font-size: 14px;
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
-main {
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p, a {
+  font-size: 13px;
+}
+
+p {
+  color: #666;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/** HEADER **/
+header {
   width: 100%;
-  height: auto;
+  background: #7391E2;
+  color: white;
 }
 
-main .card {
-  max-width: 500px;
-  margin: 0 auto;
-  border: none;
-}
-
-main .filter {
+header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  min-height: 80px;
+}
+
+header .navbar .logo {
+  max-width: 250px;
+  height: 80px;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header .navbar .logo a {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 22px;
+}
+
+header .navbar__list {
+  list-style-type: none;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
-  height: 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  padding-right: 5%;
+}
+
+header .navbar__list__item {
+  width: 100%;
+  padding: 0.5em 0;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+  color: rgba(238, 238, 238, 0.8);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header .navbar__list__item:hover, header .navbar__list__item:active {
+  cursor: pointer;
   color: white;
-  background: rgba(0, 0, 0, 0.15);
+}
+
+header .navbar .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #7391E2;
+}
+
+header .navbar .toggle {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+header .navbar .toggle:hover {
+  cursor: pointer;
+}
+
+header .navbar .toggle__bar {
+  width: 80%;
+  height: 2px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 5px;
 }
 
 main .bienvenue {
-  width: 100%;
-  background-image: url("img/bg-saints.jpg");
-  background-size: cover;
-  height: calc(100vh - 64px) !important;
+  width: calc(100% - 20px);
+  padding-left: 20px;
+  position: relative;
 }
 
-@media (min-width: 500px) {
-  main .bienvenue {
-    height: 50vh;
-  }
+main .bienvenue h1 {
+  color: #1D4851;
 }
 
-main .mairie {
-  width: 100%;
-  background-image: url("img/mairie.jpg");
-  background-size: cover;
+main .bienvenue::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1D4851;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
-@media (min-width: 500px) {
-  main .mairie {
-    height: 50vh;
-  }
-}
-
-main .poste__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .poste__title img {
-  display: block;
-  width: 144px;
-  height: 55px;
-}
-
-main .bibli {
-  width: 100%;
-  background-image: url("img/bibli.jpg");
-  background-size: cover;
-}
-
-@media (min-width: 500px) {
-  main .bibli {
-    height: 50vh;
-  }
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: auto;
-}
-
-footer ul {
+main .categories div {
+  width: 230px;
+  margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,16 +204,89 @@ footer ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  list-style-type: none;
+  text-align: center;
+  border: 1px solid #ccc;
 }
 
-footer ul li a {
-  text-decoration: none;
+main .categories .mairie {
+  padding: 15px 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main .categories .mairie img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+main .categories .mairie h2 {
+  padding: 1em 0 10px 0;
+  color: #333;
+  font-weight: 700;
+}
+
+main .categories .mairie:hover {
+  background: #1D4851;
+  color: white;
+}
+
+main .categories .mairie:hover h2 {
+  color: white;
+}
+
+footer {
+  padding: 1em;
+  background: #666;
+  color: white;
+}
+
+@media (min-width: 480px) {
+  /** FONT-SIZE **/
+  header .navbar .logo {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  main .bienvenue {
+    max-width: 425px;
+  }
+}
+
+@media (min-width: 768px) {
+  header .navbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .navbar .toggle {
+    display: none;
+  }
+  header .navbar__list {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .navbar__list__item {
+    border-radius: 2px;
+  }
+  header .navbar__list__item a {
+    padding: 6px 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
