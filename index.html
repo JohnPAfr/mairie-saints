@@ -4,113 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+    
     <title>Marie de Saint en Puisaye</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
-        <a class="navbar-brand font-weight-bold" href="/"><h1>Saints-en-Puisaye</h1></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navigation">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Accueil<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Associations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tourisme et Loisirs</a>
-                </li>   
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a href="/">Ville de Saints&#8209en&#8209Puisaye</a></h1>
+            <div class="toggle">
+            <span class="toggle__bar"></span>
+            <span class="toggle__bar"></span>
+            <span class="toggle__bar"></span>
+            </div>
+            <ul class="navbar__list">
+            <li class="navbar__list__item">
+                <a href="#" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__list__item">
+                <a href="#" class="navbar__links">About</a>      
+            </li>
+            <li class="navbar__list__item">
+                <a href="#" class="navbar__links">Infos</a>
+            </li>
+            <li class="navbar__list__item">
+                <a href="#" class="navbar__links">Contact</a>
+            </li>
             </ul>
-        </div>
-    </nav>
-    
+        </nav>
+    </header>
     <main>
+        <section class="carrousel"></section>
         <section class="bienvenue">
-            <div class="filter">
-                <div class="bienvenue__container card bg-transparent p-3">
-                    <h2 class="text-uppercase text-center">bienvenue à <br>saints-en-puisaye</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi eligendi saepe odio similique error? Adipisci, facere! Vero vel saepe a, deleniti dolore nesciunt iure in reiciendis quisquam eligendi numquam!</p>
-                </div>
-            </div>
+            <h1>bienvenue à Saints&#8209en&#8209Puisaye</h1>
+            
+            <p>Au milieu de la Puisaye Forterre, notre petit village vous fera découvrir de nombreux paysages: bocages, prairies, forêts et décrite par Colette comme sombre et illuminé d'étangs.</p>
+            <div class="btn"></div>
         </section>
 
-        <section class="informations px-5 py-4">
-            <div class="card p-">
-                <h2 class="histoire pt-3 pb-2">Histoire de Saints</h2>
-                <p>La commune de Saints-en-Puisaye est située en Bourgogne, à la limite de deux régions naturelles : la Puisaye et la Forterre :
-                la Puisaye, pays de bocages et de prairies, d'étangs et de forêts, chère au coeur de Colette qui la décrit "sombre et illuminée d'étangs", la Forterre, "forte terre", aux paysages vallonnés et vastes plateaux cultivés.</p>
-                <p>Ces deux régions sont associées au sein du Pays de Puisaye-Forterre qui oeuvre à leur développement.</p>
-                <p>Blotti dans son frais bocage, Saints-en-Puisaye est un village accueillant de presque 600  habitants : les saintons. L'agriculture et l'artisanat sont les deux pôles de la vie économique.</p>
-                <p>Notre village doit son supplément d'âme à sa vie associative : théâtre, football, concerts, fête des moissons, foire aux moutons et aux chèvres, conférences, pêche, chasse, marché bio et autres animations concoctées par les bénévoles.</p>
+        <section class="categories">
+            <div class="mairie">
+                <img src="img/mairie.jpg" alt="mairie">
+                <h2>mairie</h2>
+                <a href="/">Plus d'informations &#187;</a>
             </div>
-           
-        </section>
-
-        <section class="mairie">
-            <div class="filter">
-                <div class="mairie__container px-5">
-                    <h2 class="pt-3 pb-2">Notre mairie</h2>
-                    <p>Les secrétaires de mairie vous accueillent au 1, rue de la mairie du lundi au samedi de 9h à 12h. Les permanences du maire s'effectuent le samedi de 9h à 12h. Vous pouvez nous contacter par téléphone au 03.86.45.45.72, par fax au 03.86.45.61.66 et par mail à mairiesaints@orange.fr. Pour plus d'informations, consultez les rubriques à droite.</p>
-                </div>
+            <div class="mairie">
+                <img src="img/mairie.jpg" alt="mairie">
+                <h2>mairie</h2>
+                <a href="/">Plus d'informations &#187;</a>
             </div>
-        </section>
-
-        <section class="ecole px-5">
-            <div class="ecole__title">
-                <img src="" alt="">
-                <h2 class="pt-3 pb-2">L'Ecole pour nos petits</h2>
-            </div>
-            <p>Notre groupe scolaire, école publique, compte trois classes, une salle d'évolution et un dortoir pour la sieste des élèves de la classe maternelle. Les enfants peuvent être scolarisés à Saints-en-Puisaye de la maternelle au CM2. Nos enseignantes assurent avec dévouement et compétence leur mission de service public. Chaque classe est équipée de matériel informatique.</p>
-            <p>A la cantine scolaire, située à l'arrière du bâtiment, les repas  sont préparés sur place, des produits biologiques de proximité sont intégrés dans les menus. Des analyses, tant des échantillons de repas que des prélèvements sur les plans de travail, sont effectuées régulièrement par un laboratoire agréé.</p>
-        </section>
-
-        <section class="poste px-5">
-            <div class="poste__title p-1">
-                <h2 class="pt-3 pb-2">La Poste</h2>
-                <img src="img/poste.png" alt="logo de la poste" class="ml-3">
-            </div>
-            <p>En 2006, le Conseil municipal a décidé la création d'une Agence Postale Communale afin de maintenir le service postal dans notre commune.</p>
-            <p>L'Agence Postale Communale est ouverte au public du lundi
-            au samedi de 9 h 45 à 12 h.</p>
-        </section>
-
-        <section class="bibli">
-            <div class="filter">
-                <div class="bibli__container px-5">
-                    <h2 class="pt-3 pb-2">La bibliothèque</h2>
-                    <p>La bibliothèque, située au premier étage de la Mairie, vous accueille le lundi de 16 à 18 h et le vendredi de 17 à 19 h.</p>
-
-                    <p>Romans, bandes dessinées, recueils de poèmes, albums, romans policiers, albums documentaires sont à la disposition des lecteurs de tous âges.</p>
-
-                    <p>Tous les trimestres, le prêt de la Bibliothèque Départementale de Prêt est renouvelé. Sachez qu'il y a du nouveau : des dons et des achats, grâce au budget alloué par la commune, viennent étoffer le choix proposé à nos lecteurs.</p>
-
-                    <p>Les animatrices bénévoles vous conseillent, vous pouvez leur demander de vous commander un ouvrage. Une navette de la Bibliothèque Départementale le déposera.</p>
-                </div>
+            <div class="mairie">
+                <img src="img/mairie.jpg" alt="mairie">
+                <h2>mairie</h2>
+                <a href="/">Plus d'informations &#187;</a>
             </div>
         </section>
     </main>
 
-    <footer class="px-5 py-2">
-        <p class="copyright pt-1">Copyright</p>
-        <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Site accessible</a></li>
-        </ul>
+    
+    <footer>
+        Mentions légales | Copyright &#169 KUMATEK
     </footer>
-
-    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script defer src="index.js"></script>
 </body>
 </html>
