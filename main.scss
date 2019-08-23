@@ -28,20 +28,39 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Muli:400,700,900&display=swap');
 
 /** VARIABLES **/
-$red: #7391E2; //rgba(223, 25, 58, 1);
-$green: #1D4851; //#DEC039; //#784B3D;
+$primary: #7391E2; //rgba(223, 25, 58, 1);
+$secondary: #1D4851; //#DEC039; //#784B3D;
 $color-text: #666;
 
-$fs-xs: 13px;
-$fs-s: 16px;
-$fs-m: 18px;
-$fs-l: 20px;
-$fs-xl: 22px;
+$fs-xs: 0.8rem; // 12.8px
+$fs-s: 1rem;
+$fs-m: 1.1rem; // 17.6px
+$fs-l: 1.3rem; // 20.8px
+$fs-xl: 1.5rem; // 24px
 
+/** KEYFRAMES **/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 /** GLOBAL **/
 
 html{
+    font-size: 16px;
 }
 body {
     display: flex;
@@ -89,7 +108,7 @@ a {
 
 header {
     width: 100%;
-    background: $red;
+    background: $primary;
     color: white;
 
     .navbar {
@@ -103,7 +122,7 @@ header {
         .logo {
             max-width: 250px;
             height: 80px;
-            padding-left: 5%;
+            padding-left: 1rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -143,14 +162,14 @@ header {
     
         .active {
             display: flex;
-            background: $red  ;
+            background: $primary  ;
 
         }
 
         .toggle {
             position: absolute;
             top: 25px;
-            right: 25px;
+            right: 1rem ;
         
             display: flex;
             flex-direction: column;
@@ -179,13 +198,105 @@ header {
 }
 
 main {
+    .carousel {
+        width: 100%;
+        height: 25vh;
+        margin: 0;
+
+        position: relative;
+        
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            transition: opacity 500ms ease-in-out;
+        
+            .slide {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                opacity: 0;
+    
+                background-size: cover;
+                background-position: center;
+    
+                &.current {
+                    opacity: 1;
+                }
+    
+                &.current &-content {
+                    opacity: 1;
+                    transform: translateX(100%);
+                    transition: all 0.7s ease-in-out 0.3s;
+                }
+    
+                &-content {
+                    width:80%;
+                    padding: 0.5rem;
+        
+                    position: absolute; 
+                    left: 10%;
+                    bottom: 25px;
+                    
+    
+                    opacity: 1;
+                    background: rgba(255, 255, 255, 0.6);
+        
+                    .btn {
+                        width: fit-content;
+                        padding: 0.2rem 0.4rem;
+        
+                        border: 1px solid black;
+        
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+            }
+    
+            .slide:first-child {
+                background-image: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900');
+            }
+            .slide:nth-child(2) {
+                background-image: url('https://source.unsplash.com/BeOW_PJjA0w/1600x900');
+            }
+            .slide:nth-child(3) {
+                background-image: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900');
+            }
+        } 
+        #prev,
+        #next {
+            position: absolute;
+            top: 40%;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        #prev {
+            left: 0;
+        }
+        #next {
+            right: 0;
+        }
+    }
+
+
     .bienvenue {
         width: calc(100% - 20px);
         padding-left: 20px;
         position: relative;
 
         h1 {
-            color: $green;
+            color: $secondary;
         }
 
         &::before {
@@ -195,7 +306,7 @@ main {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: $green;
+            background-color: $secondary;
 
             transform: scaleY(1);
         }
@@ -232,7 +343,7 @@ main {
                 font-weight: 700;
             }
             &:hover {
-                background: $green;
+                background: $secondary;
                 color: white;
 
                 h2 {
@@ -251,23 +362,25 @@ footer {
 
 @media (min-width: 480px) {
     /** FONT-SIZE **/
-    $fs-xs: 15px;
-    $fs-s: 19px;
-    $fs-m: 22px;
-    $fs-l: 24px;
-    $fs-xl: 28px;
+    html{
+        font-size: 18px;
+    }
         
     header {
         .navbar {
             .logo {
                 max-width: fit-content;
+                padding-left: 1.5rem;
+            }
+            .toggle {
+                right: 1.5rem;
             }
         }
     }
 
     main {
         .bienvenue {
-            max-width: 425px;
+            max-width: 500px;
         }
     }
 }
